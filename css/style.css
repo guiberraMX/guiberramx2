@@ -505,6 +505,15 @@ span.paragraph-text{
   color: #8a8a8a;
 }
 
+.headergroup h2{
+  margin-top: 33px !important;
+}
+
+
+.team-member-text p{
+  margin-top: 33px!important;
+  text-align: center!important;
+}
 .section-intro h1 .seconday, .section-intro h1 .em, .section-intro h1 .section-team .team-members li .team-member-title .em, .section-team .team-members li .team-member-title .section-intro h1 .em, .section-intro h1 .section-brand .guidelines .columns .colors ul li .em, .section-brand .guidelines .columns .colors ul li .section-intro h1 .em,
 .section-intro h1 .main,
 .headergroup h2 .seconday,
