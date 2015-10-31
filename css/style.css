@@ -83,6 +83,80 @@ img {
   display: block;
 }
 
+
+
+
+
+
+
+
+
+
+#container{
+      margin:0;
+      padding:0;
+      display: inline-block;
+      position: relative;
+      width: 100%;
+      padding-bottom: 67%;
+      vertical-align: middle;
+      overflow: hidden;
+    }
+
+    .svg-content {
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    polygon {
+      fill-opacity: 1;
+      -webkit-transition: all 0.1s linear;
+    }
+
+    polygon:hover{
+      fill-opacity: 0.7;
+    }
+
+    .over {
+      -webkit-animation: demo 3s;
+      -moz-animation:    demo 3s;
+      -o-animation:      demo 3s;
+      animation:         demo 3s;
+    }
+
+    @keyframes demo {
+       0% {fill-opacity:1;}
+       50% {fill-opacity:0.7;}
+       100% {fill-opacity:1;}
+    }
+
+    @-moz-keyframes demo { /* Firefox */
+       0% {fill-opacity:1;}
+       50% {fill-opacity:0.7;}
+       100% {fill-opacity:1;}
+    }
+
+    @-webkit-keyframes demo { /* Safari and Chrome */
+       0% {fill-opacity:1;}
+       50% {fill-opacity:0.7;}
+       100% {fill-opacity:1;}
+    }
+
+    @-o-keyframes demo { /* Opera */
+       0% {fill-opacity:1;}
+       50% {fill-opacity:0.7;}
+       100% {fill-opacity:1;}
+    }
+
+    path {
+      -webkit-transition: all 0.1s linear;
+    }
+
+    path:hover{
+      fill: #444;
+    }
 /* 'rem' is a Sass mixin that converts pixel values to rem values
  * Returns 2 lines of code — regular pixel values and converted rem values 
  * 
