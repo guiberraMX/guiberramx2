@@ -2919,12 +2919,17 @@ section#tips-part {
   font-size: 1.5em;
 }
 
-
+.container-template img{
+  display: inline-block!important;
+  vertical-align: middle!important;
+  position: relative;
+  margin: 20px;
+}
 
 /* Events Calendar */
 
 .events-part .section-seperator{
-  background-image: url(../images/events.jpg);
+  background-image: url(../images/Flickr-Cover.png);
 }
 
 .events-part .events-list .event-titles {
