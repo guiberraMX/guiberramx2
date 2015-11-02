@@ -1,4 +1,13 @@
+@import "compass/css3";
 @import url("http://hello.myfonts.net/count/2a8a52");
+
+
+.canvas33 {
+  margin: 20px auto;  
+  display: block;
+}
+
+
 /* Colours */
 /* Base font size */
 /* Imports */
@@ -88,6 +97,26 @@ img {
 
 
 
+@import "compass/css3";
+
+@import url(http://fonts.googleapis.com/css?family=Share+Tech+Mono);
+
+
+
+
+svg{
+  width: 400px;
+  height: 120px;
+  display: block;
+  position: relative;
+  overflow: hidden; 
+  margin: 0 auto;
+ 
+
+ 
+}
+
+
 
 
 
@@ -101,6 +130,7 @@ img {
       padding-bottom: 67%;
       vertical-align: middle;
       overflow: hidden;
+
     }
 
     .svg-content {
@@ -2936,7 +2966,7 @@ margin-left: 15px;
   margin-bottom: 1.5em;
 }
 .membership-part .membership-part-section-seperator:after {
-  background: rgba(27, 32, 33, 0.88);
+  background: #000;
 }
 .membership-part .membership-part-section-seperator.dont-scroll {
   background-position: 50% 50% !important;

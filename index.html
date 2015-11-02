@@ -23,8 +23,69 @@
 	
 	<link href="css/font-awesome.min.css" rel="stylesheet"/>
 
+
+	<link href='http://fonts.googleapis.com/css?family=Varela' rel='stylesheet' type='text/css'>
+
+
+
+
 </head>
 	<body>
+
+
+	<script type="text/javascript">
+
+
+var canvas33 = document.getElementById('canvas')
+  , context = canvas.getContext('2d')
+  , img = new Image()
+  , w
+  , h
+  , offset
+  , glitchInterval;
+
+img.src = 'http://blog.codepen.io/wp-content/uploads/2012/06/White-Large.png';
+img.onload = function() {
+  init();
+	window.onresize = init;
+};
+
+var init = function() {
+	clearInterval(glitchInterval);
+	canvas.width = w = window.innerWidth;
+	offset = w * .1;
+	canvas.height = h = ~~(175 * ((w - (offset * 2)) / img.width));
+	glitchInterval = setInterval(function() {
+		clear();
+		context.drawImage(img, 0, 110, img.width, 175, offset, 0, w - (offset * 2), h);
+		setTimeout(glitchImg, randInt(250, 1000));
+	}, 500);
+};
+
+var clear = function() {
+	context.rect(0, 0, w, h);
+	context.fill();
+};
+    
+var glitchImg = function() {
+	for (var i = 0; i < randInt(1, 13); i++) {
+		var x = Math.random() * w;
+		var y = Math.random() * h;
+		var spliceWidth = w - x;
+		var spliceHeight = randInt(5, h / 3);
+		context.drawImage(canvas, 0, y, spliceWidth, spliceHeight, x, y, spliceWidth, spliceHeight);
+		context.drawImage(canvas, spliceWidth, y, x, spliceHeight, 0, y, x, spliceHeight);
+	}
+};
+
+var randInt = function(a, b) {
+	return ~~(Math.random() * (b - a) + a);
+};
+
+
+
+
+	</script>
 
 	<script type="text/javascript">
 
@@ -346,25 +407,159 @@ $(".triangle").velocity({
 		</section>
 
 
+
+		
+
+
+
+
+
 		<section class="membership-part" id="membership-part">
+
+
+
+
+		
+
+
+
 
 			<!-- section-seperator -->
 			<div class="membership-part-section-seperator" data-stellar-background-ratio="0.5" data-stellar-vertical-offset="0">
 				<div class="container-template">
+
+
+
+
+
+
 					<img style="margin: auto;" src="images/keys.png" alt="keys">
 					<div class="headergroup">
-						<h2>
-					        <span class="seconday">Get</span>
-					        <span>A Home</span>
+						
 
-					    </h2>
+
+
+
+
 				    </div>
 
-				    <div class="content-template">
-				        <p>Luxury operates on a membership basis. All customers who wish to be featured by Luxury need to secondayscribe to an annual membership once their application has been approved to meet our standard. We aim to feature only the best of the best.</p>
-						<p>If you would like to be considered for membership, please contact us.</p>
-				    </div>
+
+
+
+
+
+				  
+
+				  <svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 width="600px" height="100px" viewBox="0 0 600 100">
+<style type="text/css">
+
+<![CDATA[
+
+	text {
+		filter: url(#filter);
+		fill: white;
+    	font-family: 'Share Tech Mono', sans-serif;
+    	font-size: 100px;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+     		}
+]]>
+</style>
+	<defs>
+
+		<filter id="filter">
+		    <feFlood flood-color="black" result="black" />
+		    <feFlood flood-color="red" result="flood1" />
+		    <feFlood flood-color="limegreen" result="flood2" />
+			<feOffset in="SourceGraphic" dx="3" dy="0" result="off1a"/>
+			<feOffset in="SourceGraphic" dx="2" dy="0" result="off1b"/>
+			<feOffset in="SourceGraphic" dx="-3" dy="0" result="off2a"/>
+			<feOffset in="SourceGraphic" dx="-2" dy="0" result="off2b"/>
+		    <feComposite in="flood1" in2="off1a" operator="in"  result="comp1" />
+		    <feComposite in="flood2" in2="off2a" operator="in" result="comp2" />
+
+ 		  	<feMerge x="0" width="100%" result="merge1">
+				<feMergeNode in = "black" />
+				<feMergeNode in = "comp1" />
+				<feMergeNode in = "off1b" />
+
+				<animate 
+					attributeName="y" 
+		    		id = "y"
+		    		dur ="4s"
+		    		
+		    		values = '104px; 104px; 30px; 105px; 30px; 2px; 2px; 50px; 40px; 105px; 105px; 20px; 6ßpx; 40px; 104px; 40px; 70px; 10px; 30px; 104px; 102px'
+
+		    		keyTimes = '0; 0.362; 0.368; 0.421; 0.440; 0.477; 0.518; 0.564; 0.593; 0.613; 0.644; 0.693; 0.721; 0.736; 0.772; 0.818; 0.844; 0.894; 0.925; 0.939; 1'
+
+		    		repeatCount = "indefinite" />
+ 
+				<animate attributeName="height" 
+		    		id = "h" 
+		    		dur ="4s"
+		    		
+		    		values = '10px; 0px; 10px; 30px; 50px; 0px; 10px; 0px; 0px; 0px; 10px; 50px; 40px; 0px; 0px; 0px; 40px; 30px; 10px; 0px; 50px'
+
+		    		keyTimes = '0; 0.362; 0.368; 0.421; 0.440; 0.477; 0.518; 0.564; 0.593; 0.613; 0.644; 0.693; 0.721; 0.736; 0.772; 0.818; 0.844; 0.894; 0.925; 0.939; 1'
+
+		    		repeatCount = "indefinite" />
+		    </feMerge>
+ 			
+
+ 			<feMerge x="0" width="100%" y="60px" height="65px" result="merge2">
+				<feMergeNode in = "black" />
+				<feMergeNode in = "comp2" />
+				<feMergeNode in = "off2b" />
+
+				<animate attributeName="y" 
+		    		id = "y"
+		    		dur ="4s"
+		    		values = '103px; 104px; 69px; 53px; 42px; 104px; 78px; 89px; 96px; 100px; 67px; 50px; 96px; 66px; 88px; 42px; 13px; 100px; 100px; 104px;' 
+
+		    		keyTimes = '0; 0.055; 0.100; 0.125; 0.159; 0.182; 0.202; 0.236; 0.268; 0.326; 0.357; 0.400; 0.408; 0.461; 0.493; 0.513; 0.548; 0.577; 0.613; 1'
+
+ 		    		repeatCount = "indefinite" />
+ 
+				<animate attributeName="height" 
+		    		id = "h"
+		    		dur = "4s"
+					
+					values = '0px; 0px; 0px; 16px; 16px; 12px; 12px; 0px; 0px; 5px; 10px; 22px; 33px; 11px; 0px; 0px; 10px'
+
+		    		keyTimes = '0; 0.055; 0.100; 0.125; 0.159; 0.182; 0.202; 0.236; 0.268; 0.326; 0.357; 0.400; 0.408; 0.461; 0.493; 0.513;  1'
+		    		 
+		    		repeatCount = "indefinite" />
+		    </feMerge>
+			
+		 	<feMerge>
+ 				<feMergeNode in="SourceGraphic" />	
+
+				<feMergeNode in="merge1" /> 
+ 			<feMergeNode in="merge2" />
+
+		    </feMerge>
+	    </filter>
+
+	</defs>
+
+<g>
+	<text x="33%" y="100">Buei</text>
+</g>
+</svg>
+
+
+
+
+
+
+
+
 				    <br>
+
+				     <br>
+
+				      <br>
 				    <button type="button" class="form-btn semibold">Get A Home</button>
 				</div>
 			</div>
@@ -620,10 +815,13 @@ $(".triangle").velocity({
 
 		<section>
 			
-			<!-- Create your own SVG triangle pattern at msurguy.github.io/triangles/ -->
+			<!-- Create your own SVG triangle pattern at
 <div id="container">
+
   <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"  viewBox="0 0 1200 800"  xml:space="preserve" preserveAspectRatio="xMinYMin meet" class="svg-content">
   <g id="Layer_3">
+
+
     <polygon class="triangle" fill="#4C72B8" stroke="#4C72B8" stroke-width="2.3973" stroke-linejoin="round" stroke-miterlimit="1" points="
       1454.615,764.603 1260.432,508.089 1147.758,901.249  "/>
     <polygon class="triangle" fill="#4C75BA" stroke="#4C75BA" stroke-width="2.3973" stroke-linejoin="round" stroke-miterlimit="1" points="
@@ -1061,6 +1259,9 @@ $(".triangle").velocity({
   </svg>
 
 </div>
+
+
+ msurguy.github.io/triangles/ -->
  
 
 
